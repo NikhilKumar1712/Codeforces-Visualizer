@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Codeforces Visualizer</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="/css/cfvis1.css">
+	</head>
+	<body>
+		 <nav class="navbar navbar-dark bg-dark">
+		 	<div class="container">
+		 		<a href="" class="navbar-brand">Home</a>
+		 	</div>
+		 </nav>
+		 <section class="home"></section>
+    	<div style="height: 350px">
+    			<br>
+				<h2 class="myH2">Codeforces Visualizer</h2><br>
+					<p class="myP">
+						Codeforces is one of the most popular platforms for practicing competitive programming, and world’s best programmers also participate in contests held here.
+					</p>
+					<p class="myP">
+						Codeforces Visualizer is an open hosted visualizer for codeforces accounts that tells you complete details of a user on codeforces, such as: his rating change, no. of questions attempted by user, topics wise distribution of user’s practice, etc.
+					</p>
+	    </div>
+	    <form action="/details" method = "POST">
+	    	<div class="wrap" style="height: 200px">
+			   <div class="search">
+				      <input type="text" class="searchTerm"  name = "attribute" placeholder="Codeforces Handle">
+				      <button type="submit" class="searchButton">
+				        <i class="fa fa-search"></i>
+				     </button>
+				</div>
+			</div>
+	    </form>
+	</body>
+</html>

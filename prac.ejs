@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Rating page</title>
+</head>
+<body>
+  <div style="height: 80px">
+  </div>
+  <div class="container">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script>
+    let myChart = document.getElementById('myChart').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let massPopChart = new Chart(myChart, {
+      type:'line',
+      data:{
+        labels:<%- JSON.stringify(a); %>,
+        datasets:[{
+          label:'Codeforces Rating',
+          data:<%- JSON.stringify(b); %>,
+          backgroundColor:'rgba(255, 99, 132, 0.6)',
+          borderWidth:1,
+          borderColor:'#777',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000',
+		  fill:false
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+          text:'Contest wise Rating',
+          fontSize:25
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+  
+	<div style="height: 80px">	
+	</div>
+  <div class="container">
+    <canvas id="myChart1"></canvas>
+  </div>
+
+  <script>
+    let myChart2 = document.getElementById('myChart1').getContext('2d');
+
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let massPopChart1 = new Chart(myChart2, {
+      type:'bar',
+      data:{
+        labels: <%- JSON.stringify(c); %>,
+        datasets:[{
+		  label:'Number of Problems Solved',
+          data:<%- JSON.stringify(d); %>,
+          backgroundColor:'rgba(100, 209, 43, 0.8)',
+          borderWidth:1,
+          borderColor:'#777',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000'
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+          text:'Problem Ratings',
+          fontSize:25
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+	<div style="height: 50px">	
+	</div>
+	
+	<div class="container">
+    <canvas id="myChart2"></canvas>
+  </div>
+
+  <script>
+    let myChart3 = document.getElementById('myChart2').getContext('2d');
+
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let massPopChart2 = new Chart(myChart3, {
+      type:'pie',
+      data:{
+        labels: <%- JSON.stringify(e); %>,
+        datasets:[{
+          label:'Rating of Questions',
+          data:<%- JSON.stringify(f); %>,
+          backgroundColor:[
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)',
+            'rgba(255, 99, 132, 0.6)',
+		    'rgba(241, 70, 117, 0.7)',
+		    'rgba(61, 253, 175, 0.7)',
+		    'rgba(27, 135, 136, 0.9)',
+		    'rgba(113, 156, 83, 0.9)'
+          ],
+          borderWidth:1,
+          borderColor:'#777',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000'
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+          text:'Type of Verdicts',
+          fontSize:25
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+	<div class="container">
+    <canvas id="myChart3"></canvas>
+  </div>
+
+  <script>
+    let myChart4 = document.getElementById('myChart3').getContext('2d');
+
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let massPopChart3 = new Chart(myChart4, {
+      type:'pie',
+      data:{
+        labels: <%- JSON.stringify(g); %>,
+        datasets:[{
+          label:'Questions Tags',
+          data:<%- JSON.stringify(h); %>,
+          backgroundColor:[
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)',
+            'rgba(255, 99, 132, 0.6)',
+		    'rgba(120, 145, 190, 0.5)',
+		  	'rgba(35, 13, 84, 0.4)','rgba(246, 179, 68, 0.6)',
+		    'rgba(208, 91, 103, 0.3)','rgba(22, 71, 117, 0.7)',
+		    'rgba(167, 236, 77, 0)','rgba(53, 235, 65, 0.8)',
+		    'rgba(54, 142, 71, 0.1)','rgba(142, 24, 101, 0.9)',
+		    'rgba(116, 108, 124, 0.6)','rgba(231, 23, 168, 0.9)',
+		    'rgba(5, 71, 15, 0.9)','rgba(115, 235, 216, 0.6)',
+		    'rgba(241, 8, 243, 0.6)','rgba(244, 157, 72, 0.7)',
+		    'rgba(153, 187, 163, 1)','rgba(186, 121, 40, 0.9)',
+		    'rgba(134, 18, 183, 0.8)','rgba(38, 243, 16, 0.9)',
+		    'rgba(205, 59, 40, 0.7)','rgba(126, 10, 15, 0.7)',
+		    'rgba(105, 183, 125, 0.8)','rgba(241, 70, 117, 0.7)',
+		    'rgba(198, 219, 160, 0.9)','rgba(9, 40, 34, 0.7)',
+		    'rgba(61, 253, 175, 0.7)','rgba(196, 81, 126, 0.8)',
+		  	'rgba(241, 70, 117, 0.7)',
+		    'rgba(61, 253, 175, 0.7)',
+		    'rgba(27, 135, 136, 0.9)',
+		    'rgba(113, 156, 83, 0.9)',
+		    'rgba(183, 237, 126, 0.9)',
+		    'rgba(7, 237, 39, 0.4)'
+          ],
+          borderWidth:1,
+          borderColor:'#777',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000'
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+          text:'Problem Tags',
+          fontSize:25
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+	
+</body>
+</html>
